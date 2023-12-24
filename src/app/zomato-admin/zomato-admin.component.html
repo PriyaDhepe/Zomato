@@ -1,0 +1,131 @@
+<div style="background: azure; border: solid #8deeee">
+  <form [formGroup]="zomatoAdmin">
+    <div style="display: flex; flex-direction: row">
+      <mat-card class="mat-card">
+        <b class="label"><mat-label>Hotel Id</mat-label></b>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Id" formControlName="id" />
+        </mat-form-field>
+      </mat-card>
+      <mat-card class="mat-card">
+        <b class="label"><mat-label> Hotel Name</mat-label> </b>
+        <mat-form-field>
+          <mat-select placeholder=" Name" formControlName="hotelName">
+            <mat-option> </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card>
+      <mat-card class="mat-card">
+        <b class="label"><mat-label> Hotel Location </mat-label></b>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            placeholder="Location"
+            formControlName="location"
+          />
+        </mat-form-field>
+      </mat-card>
+      <mat-card class="mat-card">
+        <b class="label"><mat-label>cuisines </mat-label></b>
+
+        <mat-form-field>
+          <mat-select placeholder="cuisines" formControlName="cuisines">
+            <mat-option> </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card>
+      <mat-card class="mat-card">
+        <b class="label"><mat-label> Hotel Time </mat-label></b>
+
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            placeholder="Time"
+            formControlName="time"
+          />
+        </mat-form-field>
+      </mat-card>
+    </div>
+    <div style="display: flex; flex-direction: row; margin-top: 16px">
+      <mat-card class="mat-card">
+        <b class="label"><mat-label>Food Type </mat-label></b>
+
+        <mat-form-field>
+          <mat-select placeholder="Food Type" formControlName="type">
+            <mat-option> </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card>
+      <mat-card class="mat-card">
+        <b class="label"><mat-label> Food Category</mat-label></b>
+
+        <mat-form-field>
+          <mat-select placeholder="Category" formControlName="category">
+            <mat-option> </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card>
+      <mat-card class="mat-card">
+        <b class="label"><mat-label>Dish Name</mat-label></b>
+
+        <mat-form-field>
+          <mat-select placeholder="Dish" formControlName="dishName">
+            <mat-option> </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card>
+      <mat-card class="mat-card">
+        <b class="label"><mat-label> Dish price </mat-label></b>
+
+        <mat-form-field>
+          <input
+            matInput
+            type="number"
+            placeholder="price"
+            formControlName="price"
+          />
+        </mat-form-field>
+      </mat-card>
+      <mat-card class="mat-card">
+        <b class="label"><mat-label> Dish Description</mat-label></b>
+
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            placeholder="Description"
+            formControlName="description"
+          />
+        </mat-form-field>
+      </mat-card>
+    </div>
+    <button
+      mat-raised-button
+      style="margin-left: 718px; width: 119px; height: 32px; margin-top: 7px"
+      (click)="submitData()"
+    >
+      submit
+    </button>
+  </form>
+</div>
+<div>
+  <div style="flex-direction: column; margin-left: 2px">
+    <img class="img" src="../../assets/zomato.png" />
+    <img class="img" src="../../assets/zomato.png" />
+    <img class="img" src="../../assets/zomato.png" />
+    <img class="img" src="../../assets/zomato.png" />
+    <img class="img" src="../../assets/zomato.png" />
+    <img class="img" src="../../assets/zomato.png" />
+    <img class="img" src="../../assets/zomato.png" />
+    <img class="img" src="../../assets/zomato.png" />
+    <img class="img" src="../../assets/zomato.png" />
+    <img class="img" src="../../assets/zomato.png" />
+    <img class="img" src="../../assets/zomato.png" />
+    <img class="img" src="../../assets/zomato.png" />
+    <img class="img" src="../../assets/zomato.png" />
+    <img class="img" src="../../assets/zomato.png" />
+    <img class="img" src="../../assets/zomato.png" />
+  </div>
+</div>

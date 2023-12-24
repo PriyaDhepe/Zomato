@@ -1,0 +1,20 @@
+<p>zomato-dashboard works!</p>
+<mat-card>
+  <div class="carousel">
+    <div
+      class="slides"
+      [style.transform]="'translateX(' + -slideIndex * slideWidth + 'px)'"
+    >
+      <div *ngFor="let image of images" class="slide">
+        <img
+          [src]="image.src"
+          alt="Slide {{ image.id }}"
+          [style.width.px]="imageWidth"
+          [style.height.px]="imageHeight"
+        />
+      </div>
+    </div>
+    <button (click)="prevSlide()">Previous</button>
+    <button (click)="nextSlide()">Next</button>
+  </div>
+</mat-card>
