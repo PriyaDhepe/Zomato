@@ -1,1 +1,36 @@
-<p>zomato-login works!</p>
+<div
+  style="background: linear-gradient(2deg, #f52e2e, transparent); height: 720px"
+>
+  <mat-card class="mat-card">
+    <img class="img" src="../../assets/images/zomato45.jpeg" />
+    <mat-card
+      style="
+        width: 63%;
+        margin-left: 100px;
+        border-radius: 14px;
+        margin-top: 29px;
+      "
+    >
+      <mat-form-field>
+        <mat-icon matPrefix>people</mat-icon>
+        <!-- <mat-icon matPrefix>supervised_user_circle</mat-icon> -->
+        <input matInput type="text" placeholder="your name" />
+      </mat-form-field>
+    </mat-card>
+    <mat-card
+      style="
+        width: 63%;
+        margin-left: 100px;
+        margin-top: 22px;
+        border-radius: 14px;
+      "
+    >
+      <mat-form-field>
+        <mat-icon matPrefix>lock</mat-icon>
+        <input matInput type="text" placeholder="password" />
+      </mat-form-field>
+    </mat-card>
+    <button class="button" mat-raised-button (click)="login()">Login</button>
+    <p>Not a member? <a href="registration"></a></p>
+  </mat-card>
+</div>
