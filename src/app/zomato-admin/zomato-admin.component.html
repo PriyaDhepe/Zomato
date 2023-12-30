@@ -1,94 +1,138 @@
-<div style="background: azure; border: solid #8deeee">
+<div *ngIf="zomatoAllInfo" style="background: azure; border: solid #8deeee">
   <form [formGroup]="zomatoAdmin">
     <div style="display: flex; flex-direction: row">
-      <mat-card class="mat-card">
+      <!-- <mat-card class="mat-card">
         <b class="label"><mat-label>Hotel Id</mat-label></b>
         <mat-form-field>
-          <input matInput type="text" placeholder="Id" formControlName="id" />
+          <mat-select
+            placeholder=" id"
+            formControlName="id"
+            (selectionChange)="selectiOnChangehotel()"
+          >
+            <mat-option
+              *ngFor="let item of zomatoAllInfo[0].hotelDetails"
+              [value]="item.id"
+              >{{ item.id }}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
-      </mat-card>
+      </mat-card> -->
       <mat-card class="mat-card">
         <b class="label"><mat-label> Hotel Name</mat-label> </b>
         <mat-form-field>
           <mat-select placeholder=" Name" formControlName="hotelName">
-            <mat-option> </mat-option>
+            <mat-option *ngFor="let item of getHotelInfo" [value]="item.name"
+              >{{ item.name }}
+            </mat-option>
           </mat-select>
         </mat-form-field>
       </mat-card>
-      <mat-card class="mat-card">
+      <!-- <mat-card class="mat-card">
         <b class="label"><mat-label> Hotel Location </mat-label></b>
         <mat-form-field>
-          <input
-            matInput
-            type="text"
-            placeholder="Location"
-            formControlName="location"
-          />
+          <mat-select placeholder="Location" formControlName="location">
+            <mat-option *ngFor="let item of locationArray" [value]="item">{{
+              item
+            }}</mat-option>
+          </mat-select>
         </mat-form-field>
-      </mat-card>
-      <mat-card class="mat-card">
+      </mat-card> -->
+      <!-- <mat-card class="mat-card">
         <b class="label"><mat-label>cuisines </mat-label></b>
 
         <mat-form-field>
           <mat-select placeholder="cuisines" formControlName="cuisines">
-            <mat-option> </mat-option>
+            <mat-option *ngFor="let item of cuisinesArray" [value]="item"
+              >{{ item }}
+            </mat-option>
           </mat-select>
         </mat-form-field>
-      </mat-card>
-      <mat-card class="mat-card">
+      </mat-card> -->
+      <!-- <mat-card class="mat-card">
         <b class="label"><mat-label> Hotel Time </mat-label></b>
+
+        <mat-form-field>
+          <mat-select placeholder="Time" formControlName="time">
+            <mat-option *ngFor="let item of timeArray" [value]="item"
+              >{{ item }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card> -->
+      <!-- </div>
+    <div style="display: flex; flex-direction: row; margin-top: 16px"> -->
+      <mat-card class="mat-card">
+        <b class="label"><mat-label> Food Category</mat-label></b>
 
         <mat-form-field>
           <input
             matInput
             type="text"
-            placeholder="Time"
-            formControlName="time"
+            placeholder="Category"
+            formControlName="category"
           />
+          <!-- <mat-select placeholder="Category" formControlName="category">
+            <mat-option
+              *ngFor="let item of zomatoAllInfo[0].menu"
+              [value]="item.category"
+              >{{ item.category }}
+            </mat-option>
+          </mat-select> -->
         </mat-form-field>
       </mat-card>
-    </div>
-    <div style="display: flex; flex-direction: row; margin-top: 16px">
+
       <mat-card class="mat-card">
-        <b class="label"><mat-label>Food Type </mat-label></b>
+        <b class="label"><mat-label> Food Type </mat-label></b>
 
         <mat-form-field>
-          <mat-select placeholder="Food Type" formControlName="type">
-            <mat-option> </mat-option>
-          </mat-select>
+          <input matInput placeholder="Type" formControlName="type" />
+          <!-- <mat-select placeholder="Type" formControlName="type">
+            <mat-option
+              *ngFor="let item of zomatoAllInfo[0].menu[0].type"
+              [value]="item"
+              >{{ item }}
+            </mat-option>
+          </mat-select> -->
         </mat-form-field>
       </mat-card>
-      <mat-card class="mat-card">
-        <b class="label"><mat-label> Food Category</mat-label></b>
+      <!-- <mat-card class="mat-card">
+        <b class="label"><mat-label>mainCourse </mat-label></b>
 
         <mat-form-field>
-          <mat-select placeholder="Category" formControlName="category">
-            <mat-option> </mat-option>
+          <mat-select placeholder="mainCourse" formControlName="mainCourse">
+            <mat-option *ngFor="let item of maincourseArray" [value]="item.name"
+              >{{ item.name }}
+            </mat-option>
           </mat-select>
         </mat-form-field>
-      </mat-card>
+      </mat-card> -->
       <mat-card class="mat-card">
-        <b class="label"><mat-label>Dish Name</mat-label></b>
+        <b class="label"><mat-label>Dish Name </mat-label></b>
 
         <mat-form-field>
-          <mat-select placeholder="Dish" formControlName="dishName">
-            <mat-option> </mat-option>
-          </mat-select>
+          <input matInput placeholder="Dish" formControlName="dish" />
+          <!-- <mat-select placeholder="Dish" formControlName="dish">
+            <mat-option *ngFor="let item of dessertArray" [value]="item.name"
+              >{{ item.name }}
+            </mat-option>
+          </mat-select> -->
         </mat-form-field>
       </mat-card>
       <mat-card class="mat-card">
         <b class="label"><mat-label> Dish price </mat-label></b>
 
         <mat-form-field>
-          <input
-            matInput
-            type="number"
-            placeholder="price"
-            formControlName="price"
-          />
+          <input matInput placeholder="price" formControlName="price" />
+          <!-- <mat-select placeholder="price" formControlName="price">
+            <mat-option *ngFor="let item of starterPrice" [value]="item.price"
+              >{{ item.price }}
+            </mat-option>
+          </mat-select> -->
         </mat-form-field>
       </mat-card>
-      <mat-card class="mat-card">
+      <!-- </div>
+    <div style="display: flex; flex-direction: row; margin-top: 16px"> -->
+      <!-- <mat-card class="mat-card">
         <b class="label"><mat-label> Dish Description</mat-label></b>
 
         <mat-form-field>
@@ -99,7 +143,7 @@
             formControlName="description"
           />
         </mat-form-field>
-      </mat-card>
+      </mat-card> -->
     </div>
     <button
       mat-raised-button

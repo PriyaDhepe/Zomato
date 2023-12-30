@@ -27,10 +27,20 @@
     >
       <mat-form-field>
         <mat-icon matPrefix>lock</mat-icon>
-        <input matInput type="text" placeholder="password" />
+        <input
+          [type]="hide ? 'password' : 'text'"
+          matInput
+          type="password"
+          placeholder="password"
+        />
+        <mat-icon class="placeholder" (click)="pass()">{{
+          hide ? "visibility_off" : "visibility"
+        }}</mat-icon>
       </mat-form-field>
     </mat-card>
     <button class="button" mat-raised-button (click)="login()">Login</button>
-    <p>Not a member? <a href="registration"></a></p>
+    <p class="container">
+      Not a member? <a href="/registration">Register here</a>
+    </p>
   </mat-card>
 </div>

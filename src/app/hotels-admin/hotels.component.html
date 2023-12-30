@@ -1,0 +1,69 @@
+<div style="background: azure; border: solid #8deeee">
+  <form [formGroup]="hotel">
+    <div style="display: flex; flex-direction: row">
+      <mat-card class="mat-card">
+        <b class="label"><mat-label>Hotel Name</mat-label></b>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            placeholder="Name"
+            formControlName="hotelName"
+          />
+        </mat-form-field>
+      </mat-card>
+      <mat-card class="mat-card">
+        <b class="label"><mat-label>Hotel Location</mat-label></b>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            placeholder="Location"
+            formControlName="location"
+          />
+        </mat-form-field>
+      </mat-card>
+      <mat-card class="mat-card">
+        <b class="label"><mat-label>Hotel Time</mat-label></b>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            placeholder="Time"
+            formControlName="time"
+          />
+        </mat-form-field>
+      </mat-card>
+      <mat-card class="mat-card">
+        <b class="label"><mat-label>cuisines</mat-label></b>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            placeholder="cuisines"
+            formControlName="cuisines"
+          />
+        </mat-form-field>
+      </mat-card>
+      <mat-card class="mat-card">
+        <b class="label"><mat-label>Hotel Type</mat-label></b>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            placeholder="Type"
+            formControlName="type"
+          />
+        </mat-form-field>
+      </mat-card>
+    </div>
+    <button
+      style="margin-left: 716px"
+      mat-raised-button
+      color="primary"
+      (click)="addHotel()"
+    >
+      Add Hotel
+    </button>
+  </form>
+</div>

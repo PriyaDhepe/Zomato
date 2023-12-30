@@ -1,0 +1,26 @@
+<div>
+  <mat-card style="flex-direction: row">
+    <div class="background-image-container"></div>
+    <!-- <img
+      class="image"
+      src="../../assets/images/ba.jpeg"
+      style="object-fit: repeat"
+      height="150px"
+      width="100px"
+    /> -->
+  </mat-card>
+  <div class="container">
+    <mat-card class="mat" *ngFor="let item of getHotelInfo">
+      <img
+        src="../../assets/images/{{ item.name }}.jpeg"
+        height="300px"
+        width="300px"
+      />
+      <p>{{ item.name }}</p>
+      <p>{{ item.location }}</p>
+      <p>{{ item.time }}</p>
+      <p>{{ item.type }}</p>
+      <p>{{ item.cuisines }}</p>
+    </mat-card>
+  </div>
+</div>
