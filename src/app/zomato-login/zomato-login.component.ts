@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./zomato-login.component.scss'],
 })
 export class ZomatoLoginComponent {
+  hide: boolean = true;
   login() {}
+  pass() {
+    this.hide = !this.hide;
+  }
 }

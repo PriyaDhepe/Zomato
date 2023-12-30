@@ -22,7 +22,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { ToastrModule } from 'ngx-toastr';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { HotelsComponent } from './hotels-admin/hotels.component';
+import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +32,8 @@ import { RegistrationComponent } from './registration/registration.component';
     ZomatoLoginComponent,
     ZomatoDashboardComponent,
     RegistrationComponent,
+    HotelsComponent,
+    HotelDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +54,7 @@ import { RegistrationComponent } from './registration/registration.component';
     ReactiveFormsModule,
     MatTabsModule,
     ToastrModule.forRoot(),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
